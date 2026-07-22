@@ -1,0 +1,48 @@
+﻿* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 100%; height: 100%; overflow: hidden;
+  background: #06060f;
+  font-family: 'Courier New', monospace;
+}
+canvas { display: block; position: fixed; top: 0; left: 0; z-index: 0; }
+
+/* ===== 左上角数据面板 ===== */
+#stats-panel {
+  position: fixed; top: 20px; left: 20px; z-index: 10;
+  color: #0ff; font-size: 13px; line-height: 1.8;
+  text-shadow: 0 0 6px #0ff, 0 0 12px #08f;
+  pointer-events: none;
+  background: rgba(6, 6, 15, .55);
+  padding: 14px 20px; border: 1px solid rgba(0, 255, 255, .18);
+  border-radius: 8px; backdrop-filter: blur(4px);
+}
+#stats-panel .label { color: #0af; opacity: .7; }
+#stats-panel .val { color: #0ff; font-weight: bold; }
+
+/* ===== 右下角按钮组 ===== */
+#controls {
+  position: fixed; bottom: 24px; right: 24px; z-index: 10;
+  display: flex; gap: 12px;
+}
+#controls button {
+  background: rgba(0, 255, 255, .06); color: #0cf;
+  border: 1px solid rgba(0, 200, 255, .3);
+  padding: 10px 22px; border-radius: 6px;
+  font-family: inherit; font-size: 13px; cursor: pointer;
+  transition: all .25s;
+  text-shadow: 0 0 8px #0cf; letter-spacing: 1px;
+}
+#controls button:hover {
+  background: rgba(0, 255, 255, .18);
+  border-color: #0ff;
+  box-shadow: 0 0 18px rgba(0, 255, 255, .25);
+  transform: translateY(-1px);
+}
+#controls button:active { transform: scale(.96); }
+
+/* ===== 提示文字 ===== */
+#hint {
+  position: fixed; bottom: 28px; left: 20px; z-index: 10;
+  color: rgba(0, 200, 255, .35); font-size: 11px;
+  pointer-events: none;
+}

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>霓虹弹力球实验室</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="stats-panel">
+  <div><span class="label">小球数 </span><span class="val" id="s-count">50</span></div>
+  <div><span class="label">FPS   </span><span class="val" id="s-fps">0</span></div>
+  <div><span class="label">碰撞  </span><span class="val" id="s-collisions">0</span></div>
+  <div><span class="label">鼠标  </span><span class="val" id="s-mouse">0, 0</span></div>
+</div>
+<div id="controls">
+  <button id="btn-pause">\u23f8 \u6682\u505c</button>
+  <button id="btn-reset">\u21fb \u91cd\u7f6e</button>
+  <button id="btn-gravity">\u2b07 \u91cd\u529b:\u5173</button>
+</div>
+<div id="hint">点击页面生成 10 个新球</div>
+<script src="app.js"></script>
+</body>
+</html>
